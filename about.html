@@ -28,15 +28,22 @@
 
         <!-- navigation -->
         <ul class="navbar__navigation">
-          <li class="navbar__link"><a href="#">About me</a></li>
+          <li class="navbar__link"><a href="#aboutme">About me</a></li>
           <li class="navbar__link">
             <a href="#portfolio__section">Portfolio</a>
           </li>
           <li class="navbar__link"><a href="#contact">Contact</a></li>
         </ul>
 
-        <div class="navbar__resume">
-          <a href="#">Download CV</a>
+        <!-- button -->
+        <div class="navbar__button">
+          <div class="navbar__resume">
+            <a href="#">Download CV</a>
+          </div>
+
+          <div class="bx bx-menu" id="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+          </div>
         </div>
       </nav>
     </header>
@@ -94,7 +101,7 @@
 
     <!-- about me -->
 
-    <section class="about">
+    <section class="about" id="aboutme">
       <div class="about__container container">
         <div class="about__heading">
           <div class="about__image">
@@ -140,11 +147,11 @@
             <div class="about__skill">
               <h1 class="about__title">Skill</h1>
               <ul class="about__list">
-                <li>Comunicate</li>
-                <li>Find and Solve Problems</li>
+                <li>Comunication</li>
+                <li>Solution finding and Solving</li>
                 <li>User research and usability testing</li>
                 <li>
-                  Application development : <br />
+                  Frontend Skill : <br />
                   HTML / CSS / JS
                 </li>
                 <li>
@@ -162,7 +169,7 @@
               <ul class="about__list">
                 <li>
                   <h3>Hanoi university of mining and geology</h3>
-                  <p>from 2018 to 2022</p>
+                  <p>computer science - from 2018 to 2022</p>
                 </li>
 
                 <li>
@@ -193,6 +200,8 @@
               <h1 class="about__title">Hobby</h1>
               <ul class="about__list">
                 <li><span>Music</span></li>
+                <li><span>Sketch</span></li>
+                <li><span>Guitar</span></li>
                 <li><span>Game</span></li>
                 <li>
                   <span>Reading book : </span><br />
@@ -376,6 +385,14 @@
         $(document).scroll(function () {
           var $nav = $(".navbar-fixed-top");
           $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#menu-icon").click(function () {
+          $(".navbar__navigation").slideToggle();
         });
       });
     </script>
