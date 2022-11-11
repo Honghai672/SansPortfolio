@@ -19,6 +19,11 @@
       referrerpolicy="no-referrer"
     />
     <script src="main.js" defer></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
   </head>
   <body>
     <header>
@@ -36,62 +41,68 @@
           <li class="navbar__link"><a href="#contact">Contact</a></li>
         </ul>
 
-        <div class="navbar__resume">
-          <a href="#">Download CV</a>
+        <div class="navbar__button">
+          <div class="navbar__resume">
+            <a href="#">Download CV</a>
+          </div>
+
+          <div class="bx bx-menu" id="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+          </div>
         </div>
       </nav>
+    </header>
 
-      <section class="hero" id="hero__section">
-        <div class="hero__container container">
-          <div class="hero__content">
-            <h3>Hello There,</h3>
-            <h1>I am Nguyen Hai !</h1>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
-              enim, sed cumque, harum sint officiis incidunt saepe id facere
-              quam vero? Nobis voluptatem eligendi quos provident distinctio,
-              deserunt neque tenetur!
-            </p>
+    <section class="hero" id="hero__section">
+      <div class="hero__container container">
+        <div class="hero__content">
+          <h3>Hello There,</h3>
+          <h1>I am Nguyen Hai !</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
+            enim, sed cumque, harum sint officiis incidunt saepe id facere quam
+            vero? Nobis voluptatem eligendi quos provident distinctio, deserunt
+            neque tenetur!
+          </p>
 
-            <div class="hero__contact">
-              <div class="navbar__resume">
-                <a href="#">Download CV</a>
-              </div>
-
-              <ul class="social__wrapper">
-                <li class="social__item">
-                  <a href="#">
-                    <i class="fa-brands fa-facebook"></i>
-                  </a>
-                </li>
-
-                <li class="social__item">
-                  <a href="#">
-                    <i class="fa-brands fa-linkedin"></i>
-                  </a>
-                </li>
-
-                <li class="social__item">
-                  <a href="#">
-                    <i class="fa-brands fa-figma"></i>
-                  </a>
-                </li>
-
-                <li class="social__item">
-                  <a href="#">
-                    <i class="fa-brands fa-dribbble"></i>
-                  </a>
-                </li>
-              </ul>
+          <div class="hero__contact">
+            <div class="navbar__resume">
+              <a href="#">Download CV</a>
             </div>
-          </div>
 
-          <div class="hero__image">
-            <img src="images/hannah-busing-vGHMXnD5A0I-unsplash.jpg" alt="" />
+            <ul class="social__wrapper">
+              <li class="social__item">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a href="#">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a href="#">
+                  <i class="fa-brands fa-figma"></i>
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a href="#">
+                  <i class="fa-brands fa-dribbble"></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-    </header>
+
+        <div class="hero__image">
+          <img src="images/hannah-busing-vGHMXnD5A0I-unsplash.jpg" alt="" />
+        </div>
+      </div>
+    </section>
 
     <!-- portfolio -->
 
@@ -140,6 +151,37 @@
             <div class="portfolio__content">
               <h3>portfolio item</h3>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- quotes -->
+
+    <section class="quotes">
+      <div class="quotes__container container">
+        <div class="quotes__item">
+          <div class="quotes__image">
+            <img src="images/abraham_lincoln_PNG4.png" alt="abraham lincoln" />
+          </div>
+
+          <div class="quotes__text">
+            <h1>"I walk slowly, but I never walk backward".</h1>
+            <span>- Abraham Lincoln</span>
+          </div>
+        </div>
+
+        <div class="quotes__item">
+          <div class="quotes__image">
+            <img src="images/pngwing.com.png" alt="steven jobs" />
+          </div>
+
+          <div class="quotes__text">
+            <h1>
+              “Design is not just what it looks like and feels like. Design is
+              how it works.”
+            </h1>
+            <span>- Steven Jobs</span>
           </div>
         </div>
       </div>
@@ -281,6 +323,11 @@
       crossorigin="anonymous"
     ></script>
 
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
     <script>
       //Get the button
       let mybutton = document.getElementById("btn-back-to-top");
@@ -312,6 +359,14 @@
         $(document).scroll(function () {
           var $nav = $(".navbar-fixed-top");
           $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#menu-icon").click(function () {
+          $(".navbar__navigation").slideToggle();
         });
       });
     </script>
